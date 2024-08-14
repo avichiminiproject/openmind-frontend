@@ -4,7 +4,9 @@ const Home = () => {
   return (
     <>
     <Header/>
-    <div>this is home page</div>
+    <div className='bg-darkgrey h-screen flex text-white'>
+        <p className='text-5xl'>Sample Project</p>
+    </div>
     </>
   )
 }
