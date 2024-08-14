@@ -2,7 +2,14 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+    <header className='bg-litegrey'>
+        <img src="" alt="" />
+        <nav>
+            naveen
+        </nav>
+    </header>
+    </>
   )
 }
 
