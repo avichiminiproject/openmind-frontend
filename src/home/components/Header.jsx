@@ -17,7 +17,10 @@ const Header = () => {
                 <Link to={'/contact'}>Contact</Link>
                 </li>
                 <li>
-                    <button className="text-white bg-liteblue px-5 py-3 rounded-full">Login</button>
+                    <button className="text-white bg-liteblue px-5 py-2.5 rounded-full">Login</button>
+                </li>
+                <li>
+                    <button className="text-white border-2 border-liteblue px-5 py-2.5 rounded-full">Register</button>
                 </li>
             </ul> 
         </nav>
