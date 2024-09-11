@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./home/Home";
 import About from './About/About'
+import NotFound from "./other/NotFound";
 export const routes = createBrowserRouter([
     {
         path : "/",
@@ -12,6 +13,6 @@ export const routes = createBrowserRouter([
     },
     {
         path: '*',
-        element: <div className="text-lg text-red-400"><a href="/">Back To Home</a></div>
+        element: <NotFound />
     }
 ])
