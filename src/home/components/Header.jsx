@@ -1,32 +1,60 @@
 import { Link } from "react-router-dom"
+import HeaderImage from "../../assets/images/home/header_logo.png"
 
 const Header = () => {
   return (
     <>
     <header className='bg-litegrey'>
-        <nav className='flex items-center justify-between px-3 py-2'>
-            <a href={'/'}><img src="./src/assets/images/home/header_logo.png" alt="header logo" className='h-16 p-2' /></a>
-            <ul className='text-white flex items-center justify-between gap-5 font-semibold'>
-                <li>
-                <Link to={'/about'}>About</Link>
-                </li>
-                <li>
-                <Link to={'/services'}>Services</Link>
-                </li>
-                <li>
-                <Link to={'/contact'}>Contact</Link>
-                </li>
-                <li>
-                    <button className="text-white bg-liteblue px-5 py-2.5 rounded-full">Login</button>
-                </li>
-                <li>
-                    <button className="text-white border-2 border-liteblue px-5 py-2.5 rounded-full">Register</button>
-                </li>
-            </ul> 
-        </nav>
+        <DesktopNavbar/>
     </header>
     </>
   )
 }
 
 export default Header
+
+function DesktopNavbar() {
+    return (
+        <>
+        <nav className="hidden lg:block">
+            <div className="flex items-center justify-between px-3">
+                <Link to={'/'}>
+                    <img src={HeaderImage} alt="Header Logo" className="h-20 p-1" />
+                </Link>
+                <ul className="flex items-center text-white">
+                    <li>
+                        <Link to={'/about'}>
+                        <h1 className="text-xl hover:text-liteblue p-2">
+                            About
+                        </h1>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/contact'}>
+                        <h1 className="text-xl hover:text-liteblue p-2">
+                            Contact
+                        </h1>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to={'/faq'}>
+                        <h1 className="text-xl hover:text-liteblue p-2">
+                            FAQ's
+                        </h1>
+                        </Link>
+                    </li>
+                </ul>
+                <div className="inline-flex items-center gap-3 text-white font-semibold">
+                    <Link to={'/login'}>
+                    <button className="py-2 px-4 bg-cyan-200 rounded-lg">Login</button>
+                    </Link>
+                    <Link to={'/register'}>
+                    <button className="py-2 px-4 bg-cyan-200 rounded-lg">Register</button>
+                    </Link>
+                    
+                </div>
+            </div>
+        </nav>
+        </>
+    )
+}
