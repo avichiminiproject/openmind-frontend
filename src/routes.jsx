@@ -9,5 +9,9 @@ export const routes = createBrowserRouter([
     {
         path: "/about",
         element: <About/>
+    },
+    {
+        path: '*',
+        element: <div className="text-lg text-red-400"><a href="/">Back To Home</a></div>
     }
 ])
